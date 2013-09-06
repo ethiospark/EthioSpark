@@ -1,0 +1,21 @@
+2013-08-04 15:40:36,209 [15]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fabebe1'
+System.ArgumentException: Unable to find the requested .Net Framework Data Provider.  It may not be installed.
+   at System.Data.Common.DbProviderFactories.GetFactory(String providerInvariantName)
+   at System.Data.Entity.Internal.LazyInternalConnection.CreateConnectionFromProviderName(String providerInvariantName)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES - CodeFirst\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 38
+2013-08-04 15:40:36,305 [15]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fabebe1'.
+2013-08-04 15:43:01,804 [17]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabebe1'.
+2013-08-04 15:44:16,386 [18]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'test'.
+2013-08-04 15:46:50,230 [18]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fa'.
