@@ -262,4 +262,8 @@
     <value>Settings</value>
     <comment>CRS</comment>
   </data>
+  <data name="EditProfile" xml:space="preserve">
+    <value>Edit Profile</value>
+    <comment>CRS</comment>
+  </data>
 </root>

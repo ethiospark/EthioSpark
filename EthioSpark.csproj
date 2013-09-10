@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="app\controller\Profile.js" />
     <Content Include="app\controller\Setting.js" />
     <Content Include="app\controller\Register.js" />
     <Content Include="app\controller\Home.js" />
@@ -176,6 +177,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringResources.tt</DependentUpon>
     </Content>
+    <Content Include="app\view\EditProfile.js" />
     <Content Include="app\view\Setting.js" />
     <Content Include="app\view\Profile.js" />
     <Content Include="app\view\CustomFieldSet.js" />

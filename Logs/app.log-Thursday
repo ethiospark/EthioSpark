@@ -1,461 +1,146 @@
-2013-08-01 21:35:57,818 [12]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fa026852'
-System.ArgumentException: The specified named connection is either not found in the configuration, not intended to be used with the EntityClient provider, or not valid.
-   at System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
-   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
-   at EthioSpark.BuisnessLogic.Model.EthiosparkEntities..ctor() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Model\EthiosparkModel.Designer.cs:line 50
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 25
-2013-08-01 21:36:11,363 [12]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fa026852'.
-2013-08-01 21:49:01,274 [43]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fa026852'
-System.Data.MetadataException: Unable to load the specified metadata resource.
-   at System.Data.Metadata.Edm.MetadataArtifactLoaderCompositeResource.LoadResources(String assemblyName, String resourceName, ICollection`1 uriRegistry, MetadataArtifactAssemblyResolver resolver)
-   at System.Data.Metadata.Edm.MetadataArtifactLoaderCompositeResource..ctor(String originalPath, String assemblyName, String resourceName, ICollection`1 uriRegistry, MetadataArtifactAssemblyResolver resolver)
-   at System.Data.Metadata.Edm.MetadataArtifactLoaderCompositeResource.CreateResourceLoader(String path, ExtensionCheck extensionCheck, String validExtension, ICollection`1 uriRegistry, MetadataArtifactAssemblyResolver resolver)
-   at System.Data.Metadata.Edm.MetadataCache.SplitPaths(String paths)
-   at System.Data.Common.Utils.Memoizer`2.Result.GetValue()
-   at System.Data.Common.Utils.Memoizer`2.Evaluate(TArg arg)
-   at System.Data.EntityClient.EntityConnection.GetMetadataWorkspace(Boolean initializeAllCollections)
-   at System.Data.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor)
-   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
-   at EthioSpark.BuisnessLogic.Model.EthiosparkEntities..ctor() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Model\EthiosparkModel.Designer.cs:line 50
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 25
-2013-08-01 21:49:01,280 [43]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fa026852'.
-2013-08-01 21:59:15,626 [12]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`address`, CONSTRAINT `fk_CITY_CODE_VALUE__CITY_ADDRESSES` FOREIGN KEY (`CityCd`) REFERENCES `codevalue` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
+2013-09-05 22:40:57,918 [45]ERROR EthioSpark.Common.AppLogManager [(null)] - Specified method is not supported.
+System.NotSupportedException: Specified method is not supported.
+   at Devart.Common.Web.Providers.DbExtendedMembershipProvider.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:42:00,599 [50]ERROR EthioSpark.Common.AppLogManager [(null)] - Specified method is not supported.
+System.NotSupportedException: Specified method is not supported.
+   at Devart.Common.Web.Providers.DbExtendedMembershipProvider.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:47:03,767 [30]ERROR EthioSpark.Common.AppLogManager [(null)] - maxInvalidPasswordAttemptsvalue is greater than 100 (C:\MyProjects\EthioSpark\EthioSpark\web.config line 59)
+System.Configuration.ConfigurationErrorsException: maxInvalidPasswordAttemptsvalue is greater than 100 (C:\MyProjects\EthioSpark\EthioSpark\web.config line 59) ---> System.Configuration.Provider.ProviderException: maxInvalidPasswordAttemptsvalue is greater than 100
+   at Devart.Common.Web.Providers.b.a(NameValueCollection A_0, String A_1, Int32 A_2, Boolean A_3, Int32 A_4)
+   at Devart.Common.Web.Providers.DbMembershipProvider.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at System.Web.Security.Membership.InitializeSettings(Boolean initializeGeneralSettings, RuntimeConfig appConfig, MembershipSection settings)
+   at System.Web.Security.Membership.Initialize()
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:48:51,872 [30]ERROR EthioSpark.Common.AppLogManager [(null)] - Unrecognized attribute: autogenerateschema (C:\MyProjects\EthioSpark\EthioSpark\web.config line 61)
+System.Configuration.ConfigurationErrorsException: Unrecognized attribute: autogenerateschema (C:\MyProjects\EthioSpark\EthioSpark\web.config line 61) ---> System.Configuration.Provider.ProviderException: Unrecognized attribute: autogenerateschema
+   at Devart.Common.Web.Providers.DbMembershipProvider.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at System.Web.Security.Membership.InitializeSettings(Boolean initializeGeneralSettings, RuntimeConfig appConfig, MembershipSection settings)
+   at System.Web.Security.Membership.Initialize()
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:49:10,998 [38]ERROR EthioSpark.Common.AppLogManager [(null)] - Unrecognized attribute: autogenerateschema (C:\MyProjects\EthioSpark\EthioSpark\web.config line 60)
+System.Configuration.ConfigurationErrorsException: Unrecognized attribute: autogenerateschema (C:\MyProjects\EthioSpark\EthioSpark\web.config line 60) ---> System.Configuration.Provider.ProviderException: Unrecognized attribute: autogenerateschema
+   at Devart.Common.Web.Providers.DbMembershipProvider.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at System.Web.Security.Membership.InitializeSettings(Boolean initializeGeneralSettings, RuntimeConfig appConfig, MembershipSection settings)
+   at System.Web.Security.Membership.Initialize()
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:49:44,324 [37]ERROR EthioSpark.Common.AppLogManager [(null)] - Unrecognized attribute: autogenerateschema (C:\MyProjects\EthioSpark\EthioSpark\web.config line 60)
+System.Configuration.ConfigurationErrorsException: Unrecognized attribute: autogenerateschema (C:\MyProjects\EthioSpark\EthioSpark\web.config line 60) ---> System.Configuration.Provider.ProviderException: Unrecognized attribute: autogenerateschema
+   at Devart.Common.Web.Providers.DbMembershipProvider.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at System.Web.Security.Membership.InitializeSettings(Boolean initializeGeneralSettings, RuntimeConfig appConfig, MembershipSection settings)
+   at System.Web.Security.Membership.Initialize()
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:56:32,175 [14]ERROR EthioSpark.Common.AppLogManager [(null)] - Unrecognized attribute: EnablePasswordRetrieval (C:\MyProjects\EthioSpark\EthioSpark\web.config line 62)
+System.Configuration.ConfigurationErrorsException: Unrecognized attribute: EnablePasswordRetrieval (C:\MyProjects\EthioSpark\EthioSpark\web.config line 62) ---> System.Configuration.Provider.ProviderException: Unrecognized attribute: EnablePasswordRetrieval
+   at Devart.Common.Web.Providers.DbMembershipProvider.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at System.Web.Security.Membership.InitializeSettings(Boolean initializeGeneralSettings, RuntimeConfig appConfig, MembershipSection settings)
+   at System.Web.Security.Membership.Initialize()
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:57:01,493 [26]ERROR EthioSpark.Common.AppLogManager [(null)] - Unrecognized attribute: EnablePasswordRetrieval (C:\MyProjects\EthioSpark\EthioSpark\web.config line 62)
+System.Configuration.ConfigurationErrorsException: Unrecognized attribute: EnablePasswordRetrieval (C:\MyProjects\EthioSpark\EthioSpark\web.config line 62) ---> System.Configuration.Provider.ProviderException: Unrecognized attribute: EnablePasswordRetrieval
+   at Devart.Common.Web.Providers.DbMembershipProvider.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at System.Web.Security.Membership.InitializeSettings(Boolean initializeGeneralSettings, RuntimeConfig appConfig, MembershipSection settings)
+   at System.Web.Security.Membership.Initialize()
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 22:59:31,368 [27]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fabebe'
+System.InvalidCastException: Specified cast is not valid.
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 34
+2013-09-05 22:59:31,455 [27]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fabebe'.
+2013-09-05 22:59:31,458 [27]ERROR EthioSpark.Common.AppLogManager [(null)] - Specified cast is not valid.
+System.InvalidCastException: Specified cast is not valid.
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 102
+2013-09-05 23:03:21,739 [31]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fabebe'.
+2013-09-05 23:03:42,869 [19]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabebe'.
+2013-09-05 23:11:44,058 [65]ERROR EthioSpark.Common.AppLogManager [(null)] - Specified method is not supported.
+System.NotSupportedException: Specified method is not supported.
+   at Devart.Common.Web.Providers.DbExtendedMembershipProvider.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at System.Web.Security.Membership.CreateUser(String username, String password, String email, String passwordQuestion, String passwordAnswer, Boolean isApproved, Object providerUserKey, MembershipCreateStatus& status)
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 22
+2013-09-05 23:20:59,851 [51]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'test'
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.String'.
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 34
+2013-09-05 23:21:15,836 [51]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'test'.
+2013-09-05 23:21:19,826 [51]ERROR EthioSpark.Common.AppLogManager [(null)] - Unable to cast object of type 'System.Guid' to type 'System.String'.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.String'.
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 102
+2013-09-05 23:24:35,684 [88]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'test'
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Devart.Data.MySql.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiosparkdev`.`address`, CONSTRAINT `FK_Address_CodeValue_CityCd` FOREIGN KEY (`CityCd`) REFERENCES `codevalue` (`CodeValueId`) ON DELETE CASCADE ON UPDATE NO ACTION)
+   at Devart.Data.MySql.bl.a()
+   at Devart.Data.MySql.bl.i()
+   at Devart.Data.MySql.ag.a(ac[]& A_0, Int32& A_1)
+   at Devart.Data.MySql.ag.a(Byte[] A_0, Int32 A_1, Boolean A_2)
+   at Devart.Data.MySql.i.e()
+   at Devart.Data.MySql.i.m()
+   at Devart.Data.MySql.MySqlCommand.InternalExecute(CommandBehavior behavior, IDisposable stmt, Int32 startRecord, Int32 maxRecords)
+   at Devart.Common.DbCommandBase.InternalExecute(CommandBehavior behavior, IDisposable stmt, Int32 startRecord, Int32 maxRecords, Boolean nonQuery)
+   at Devart.Common.DbCommandBase.ExecuteDbDataReader(CommandBehavior behavior, Boolean nonQuery)
+   at Devart.Common.DbCommandBase.ExecuteDbDataReader(CommandBehavior behavior)
+   at Devart.Data.MySql.Entity.al.a(CommandBehavior A_0)
+   at Devart.Common.Entity.y.b(CommandBehavior A_0)
    at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
    at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
    --- End of inner exception stack trace ---
    at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
    at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 39
-2013-08-01 21:59:16,797 [12]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:00:19,975 [9]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`address`, CONSTRAINT `fk_CITY_CODE_VALUE__CITY_ADDRESSES` FOREIGN KEY (`CityCd`) REFERENCES `codevalue` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 43
+2013-09-05 23:24:35,694 [88]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'test'.
+2013-09-05 23:24:35,694 [88]ERROR EthioSpark.Common.AppLogManager [(null)] - An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Devart.Data.MySql.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiosparkdev`.`address`, CONSTRAINT `FK_Address_CodeValue_CityCd` FOREIGN KEY (`CityCd`) REFERENCES `codevalue` (`CodeValueId`) ON DELETE CASCADE ON UPDATE NO ACTION)
+   at Devart.Data.MySql.bl.a()
+   at Devart.Data.MySql.bl.i()
+   at Devart.Data.MySql.ag.a(ac[]& A_0, Int32& A_1)
+   at Devart.Data.MySql.ag.a(Byte[] A_0, Int32 A_1, Boolean A_2)
+   at Devart.Data.MySql.i.e()
+   at Devart.Data.MySql.i.m()
+   at Devart.Data.MySql.MySqlCommand.InternalExecute(CommandBehavior behavior, IDisposable stmt, Int32 startRecord, Int32 maxRecords)
+   at Devart.Common.DbCommandBase.InternalExecute(CommandBehavior behavior, IDisposable stmt, Int32 startRecord, Int32 maxRecords, Boolean nonQuery)
+   at Devart.Common.DbCommandBase.ExecuteDbDataReader(CommandBehavior behavior, Boolean nonQuery)
+   at Devart.Common.DbCommandBase.ExecuteDbDataReader(CommandBehavior behavior)
+   at Devart.Data.MySql.Entity.al.a(CommandBehavior A_0)
+   at Devart.Common.Entity.y.b(CommandBehavior A_0)
    at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
    at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
    --- End of inner exception stack trace ---
    at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
    at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 39
-2013-08-01 22:00:19,985 [9]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:01:17,183 [6]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`address`, CONSTRAINT `fk_CITY_CODE_VALUE__CITY_ADDRESSES` FOREIGN KEY (`CityCd`) REFERENCES `codevalue` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
    --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 39
-2013-08-01 22:01:17,195 [6]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:02:07,565 [11]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`address`, CONSTRAINT `fk_CITY_CODE_VALUE__CITY_ADDRESSES` FOREIGN KEY (`CityCd`) REFERENCES `codevalue` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 39
-2013-08-01 22:02:07,571 [11]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:11:19,857 [41]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
-   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 32
-2013-08-01 22:11:19,863 [41]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:11:33,078 [26]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
-   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 32
-2013-08-01 22:11:33,087 [26]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:12:01,309 [41]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
-   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 32
-2013-08-01 22:12:01,318 [41]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:12:59,595 [33]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
-   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 32
-2013-08-01 22:12:59,599 [33]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:15:37,586 [7]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.TypeInitializationException: The type initializer for 'EthioSpark.BuisnessLogic.Utils.CodeValueHelper' threw an exception. ---> System.Data.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: There is already an open DataReader associated with this Connection which must be closed first.
-   at MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
-   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
-   at MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
-   at MySql.Data.MySqlClient.MySqlCommand.CheckState()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
-   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
-   --- End of inner exception stack trace ---
-   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
-   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
-   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
-   at System.Data.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
-   at System.Data.Objects.DataClasses.RelatedEnd.DeferredLoad()
-   at System.Data.Objects.DataClasses.EntityReference`1.get_Value()
-   at EthioSpark.BuisnessLogic.Model.CodeValue.get_CodeSet() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Model\EthiosparkModel.Designer.cs:line 763
-   at EthioSpark.BuisnessLogic.Utils.CodeValueHelper.LoadCodeValues() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Utils\CodeValueHelper.cs:line 26
-   at EthioSpark.BuisnessLogic.Utils.CodeValueHelper..cctor() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Utils\CodeValueHelper.cs:line 47
-   --- End of inner exception stack trace ---
-   at EthioSpark.BuisnessLogic.Utils.CodeValueHelper.get_CodeValues()
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 32
-2013-08-01 22:15:37,652 [7]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:17:26,282 [10]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx'
-System.TypeInitializationException: The type initializer for 'EthioSpark.BuisnessLogic.Utils.CodeValueHelper' threw an exception. ---> System.Data.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: There is already an open DataReader associated with this Connection which must be closed first.
-   at MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
-   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
-   at MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
-   at MySql.Data.MySqlClient.MySqlCommand.CheckState()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
-   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
-   --- End of inner exception stack trace ---
-   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
-   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
-   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
-   at System.Data.Objects.DataClasses.EntityReference`1.Load(MergeOption mergeOption)
-   at System.Data.Objects.DataClasses.RelatedEnd.DeferredLoad()
-   at System.Data.Objects.DataClasses.EntityReference`1.get_Value()
-   at EthioSpark.BuisnessLogic.Model.CodeValue.get_CodeSet() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Model\EthiosparkModel.Designer.cs:line 763
-   at EthioSpark.BuisnessLogic.Utils.CodeValueHelper.LoadCodeValues() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Utils\CodeValueHelper.cs:line 26
-   at EthioSpark.BuisnessLogic.Utils.CodeValueHelper..cctor() in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Utils\CodeValueHelper.cs:line 47
-   --- End of inner exception stack trace ---
-   at EthioSpark.BuisnessLogic.Utils.CodeValueHelper.get_CodeValues()
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 32
-2013-08-01 22:17:26,349 [10]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx'.
-2013-08-01 22:39:46,317 [79]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fitsumx'.
-2013-08-01 22:40:27,165 [76]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx1'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Duplicate entry '0' for key 'PRIMARY'
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 45
-2013-08-01 22:40:27,170 [76]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx1'.
-2013-08-01 22:45:08,321 [46]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx1'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Duplicate entry '0' for key 'PRIMARY'
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 22:45:08,334 [46]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx1'.
-2013-08-01 22:46:29,196 [49]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx1'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Duplicate entry '0' for key 'PRIMARY'
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 22:46:29,204 [49]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx1'.
-2013-08-01 22:50:31,741 [49]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx1'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 22:50:31,752 [49]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx1'.
-2013-08-01 22:51:23,735 [52]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx1'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 22:51:23,740 [52]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx1'.
-2013-08-01 22:54:23,459 [61]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx1'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 22:54:23,476 [61]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx1'.
-2013-08-01 22:56:41,323 [13]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fitsumx1'.
-2013-08-01 22:56:58,483 [36]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fitsumx15'.
-2013-08-01 22:58:23,899 [13]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 22:58:23,913 [13]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`'.
-2013-08-01 23:00:33,071 [34]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 23:00:33,081 [34]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`'.
-2013-08-01 23:03:30,561 [51]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 23:03:30,588 [51]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:04:25,633 [50]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 23:04:25,646 [50]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:04:27,783 [50]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 23:04:27,787 [50]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:10:20,098 [60]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 49
-2013-08-01 23:10:20,105 [60]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:17:17,272 [39]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 47
-2013-08-01 23:17:17,279 [39]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:18:57,849 [44]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 48
-2013-08-01 23:18:57,854 [44]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:19:24,138 [43]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 48
-2013-08-01 23:19:24,144 [43]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:19:32,923 [61]ERROR EthioSpark.Common.AppLogManager [(null)] - Error creating User info in database after successfuly creating membership info; username : 'fitsumx15`f'
-System.Data.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Cannot add or update a child row: a foreign key constraint fails (`ethiospark`.`user`, CONSTRAINT `fk_USER_ADDRESS` FOREIGN KEY (`AddressId`) REFERENCES `address` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
-   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
-   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
-   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
-   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
-   at MySql.Data.Entity.EFMySqlCommand.ExecuteNonQuery()
-   at System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   --- End of inner exception stack trace ---
-   at System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
-   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
-   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\ES\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 48
-2013-08-01 23:19:32,929 [61]INFO  EthioSpark.Common.AppLogManager [(null)] - Membership info is has been successfuly deleted a result of a rollback action; username : 'fitsumx15`f'.
-2013-08-01 23:21:28,494 [19]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fitsumx15`f'.
-2013-08-01 23:21:55,045 [27]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fitsumxf15`f'.
-2013-08-01 23:26:13,484 [27]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabe'.
-2013-08-01 23:26:24,186 [25]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabe1'.
-2013-08-01 23:26:33,341 [47]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabe1111'.
-2013-08-01 23:26:42,672 [24]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabe11111'.
-2013-08-01 23:28:22,413 [75]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fabe2'.
-2013-08-01 23:31:44,062 [40]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'ted'.
-2013-08-01 23:34:49,802 [69]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fa'.
-2013-08-01 23:39:27,032 [56]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fa1'.
-2013-08-01 23:41:03,492 [77]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'fit'.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at EthioSpark.BuisnessLogic.Security.MembershipProviderHelper.CreateUser(String username, String password, String email, User& user) in C:\MyProjects\EthioSpark\EthioSpark.BuisnessLogic\Security\MembershipProviderHelper.cs:line 102
+2013-09-05 23:42:42,277 [50]INFO  EthioSpark.Common.AppLogManager [(null)] - Successfuly registered user; username : 'test'.

@@ -2,12 +2,23 @@ Ext.define('EthioSpark.view.Profile', {
     extend: 'Ext.Container',
     xtype: 'profile',
     config: {
-        title: StrRes.Settings[locale],
+        title: StrRes.Profile[locale],
         layout: {
             type: 'vbox',
             pack: 'center',
             align: 'center'
         },
-        html: 'Profile content ....'
-    }
+        items: [
+                    {
+                        xtype: 'panel',
+                        pack:'center',
+                        html: 'User profile content...'
+                    },
+                    {
+                        xtype: 'button',
+                        action: 'goToEditProfile',
+                        text: StrRes.EditProfile[locale]
+                    }   
+              ]
+        }
 });

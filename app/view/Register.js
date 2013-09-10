@@ -21,7 +21,6 @@
         this.add({
             xtype: 'customfieldset',
             itemId: 'fsRegistration',
-            cls: 'esFieldSet',
             defaults: {
                 labelCls: 'esSmallText'
             },

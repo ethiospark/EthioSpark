@@ -92,4 +92,7 @@
 	 },	
 	Settings : {
 	 'en-US': 'Settings'
+	 },	
+	EditProfile : {
+	 'en-US': 'Edit Profile'
 	 },};
