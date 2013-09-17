@@ -36,14 +36,16 @@ Ext.application({
         'Main',
         'Login',
         'Home',
-        'Register'
+        'Register',
+        'Profile'
     ],
     controllers: [
         'Main',
         'Login',
         'Home',
         'Register',
-        'Setting'
+        'Setting',
+        'Profile'
     ],
     models: ['RegistrationInfo'],
     icon: {

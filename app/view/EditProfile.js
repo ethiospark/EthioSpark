@@ -2,7 +2,7 @@ Ext.define('EthioSpark.view.EditProfile', {
     extend: 'Ext.Container',
     xtype: 'editprofile',
     config: {
-        title: StrRes.Settings[locale],
+        title: StrRes.EditProfile[locale],
         layout: {
             type: 'vbox',
             pack: 'center',
